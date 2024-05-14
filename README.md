@@ -1,8 +1,11 @@
-# modern_onboarding_view
 
-A new Flutter project.
+# Flutter Onboarding Slider with Custom Progress Tracker
+This project demonstrates a custom onboarding slider (pageview) built using Flutter. It incorporates a progress tracker visualized with CustomPaint for a visually engaging user experience.
 
-## Getting Started
+# Features:
+Smooth page transitions for a seamless onboarding flow.
+Customizable progress tracker for visual guidance.
+Built with Flutter's powerful UI framework.
 
 # Onboarding Demo Pics
 
@@ -18,17 +21,13 @@ A new Flutter project.
 
 
 
-# TODO GIF
-![]()
+# onboarding Gif
 
 
-This project is a starting point for a Flutter application.
+https://github.com/imziaurrehman/ModernOnboardingSlides/assets/67980329/d0c807ce-3c6a-4ff3-af66-bf88b1493bf3
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
