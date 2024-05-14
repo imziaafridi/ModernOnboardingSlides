@@ -12,7 +12,7 @@ A new Flutter project.
    
   </tr>
   <tr>
-    <td><img src="https://github.com/imziaurrehman/ISARTodoApp/blob/main/assets/app-images/after/Screenshot_1715372909.png" width=270 height=520></td>
+    <td><></td>
   </tr>
 </table>
 
