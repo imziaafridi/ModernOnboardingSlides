@@ -4,6 +4,24 @@ A new Flutter project.
 
 ## Getting Started
 
+# Onboarding Demo Pics
+
+<table>
+  <tr>
+    <td>OnboardingProgressSlidersView</td>
+   
+  </tr>
+  <tr>
+    <td><img src="https://github.com/imziaurrehman/ISARTodoApp/blob/main/assets/app-images/after/Screenshot_1715372909.png" width=270 height=520></td>
+  </tr>
+</table>
+
+
+
+# TODO GIF
+![](https://github.com/imziaurrehman/ISARTodoApp/blob/main/assets/gif/TODO.gif)
+
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
