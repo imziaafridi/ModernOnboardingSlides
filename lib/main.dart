@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
@@ -52,7 +54,8 @@ class _OnboardingViewState extends State<OnboardingView> {
   var cars = carsSlideList;
   // int _currentPgIndex = 1;
 
-  var pageTracker = 0.0;
+  double pageTracker = 0.0;
+  double currentPage = 0.0;
 
   @override
   void initState() {
@@ -62,7 +65,7 @@ class _OnboardingViewState extends State<OnboardingView> {
         var halfTracker = 100 / cars.length;
         pageTracker = halfTracker;
 
-        var currentPage = pgController.page ?? 0;
+        currentPage = pgController.page ?? 0;
         setState(() {
           pageTracker = (1 + currentPage) * halfTracker;
         });
@@ -81,6 +84,8 @@ class _OnboardingViewState extends State<OnboardingView> {
   Widget build(BuildContext context) {
     debugPrint('build()');
     final Size _sizeMQ = MediaQuery.of(context).size;
+    debugPrint('traker: $pageTracker');
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -142,28 +147,40 @@ class _OnboardingViewState extends State<OnboardingView> {
                 alignment: Alignment.center,
                 children: [
                   Positioned(
-                    bottom: 60,
-                    right: 30,
-                    width: 30,
-                    height: 30,
+                    bottom: _sizeMQ.height / 14.2,
+                    right: _sizeMQ.width / 14.2,
+                    width: _sizeMQ.width / 14.5,
+                    // height: _sizeMQ.height / 20,
                     child: CustomPaint(
                       painter: ProgressTracker(progressTraker: pageTracker),
                     ),
                   ),
                   Positioned(
-                    bottom: 40,
-                    right: 15,
-                    width: 30,
-                    height: 40,
+                    bottom: _sizeMQ.height / 19.5,
+                    right: _sizeMQ.width / 25.5,
+                    width: _sizeMQ.width / 14.5,
+                    // height: 40,
                     child: GestureDetector(
                       onTap: () {
-                        pgController.nextPage(
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.linear);
+                        // forward pages
+
+                        if (currentPage < carsSlideList.length - 1) {
+                          pgController.nextPage(
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.linear);
+                        } else {
+                          // backward pages
+                          pgController.previousPage(
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.linear);
+                        }
                       },
-                      child: const Icon(
-                        Icons.arrow_forward_ios,
-                        size: 20,
+                      child: Icon(
+                        currentPage <= carsSlideList.length - 1
+                            ? Icons.arrow_forward_ios
+                            : Icons.arrow_back_ios,
+                        size: _sizeMQ.aspectRatio + 32,
+                        color: Colors.grey[400],
                       ),
                     ),
                   ),
@@ -185,13 +202,13 @@ class ProgressTracker extends CustomPainter {
     // arc 1 paint
     var p2 = Paint()
       ..color = Colors.orange
-      ..strokeWidth = 5.0
+      ..strokeWidth = 3.8
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke;
 
     var p1 = Paint()
       ..color = Colors.amber.shade200
-      ..strokeWidth = 5.0
+      ..strokeWidth = 3.5
       ..style = PaintingStyle.stroke;
     var center = Offset(size.width, size.height);
 
