@@ -2,10 +2,7 @@
 
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:modern_onboarding_view/const/app_pics.dart';
 import 'package:modern_onboarding_view/model/cars.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -21,6 +18,7 @@ class MyOnboardingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: ' M O D E R N - O N B O A R D I N G - V I E W ',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -90,7 +88,7 @@ class _OnboardingViewState extends State<OnboardingView> {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Stack(
             children: [
               //pages slider
@@ -238,3 +236,6 @@ class ProgressTracker extends CustomPainter {
     return true;
   }
 }
+
+// i need to push to main branch....
+//
