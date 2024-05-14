@@ -12,7 +12,7 @@ A new Flutter project.
    
   </tr>
   <tr>
-    <td><https://github.com/imziaurrehman/ModernOnboardingSlides/blob/main/assets/onboardingPic.png></td>
+    <td><img src="https://github.com/imziaurrehman/ModernOnboardingSlides/blob/main/assets/onboardingPic.png" width=270 height=520></td>
   </tr>
 </table>
 
